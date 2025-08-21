@@ -1,4 +1,15 @@
-import { ServicesContainer, ServiceBlock, ServiceSquare, ServiceContent, ServiceTitle, ServiceDesc, ServiceImpact, ServiceIcon } from "./styles.js";
+import { useRef, useEffect, useState } from "react";
+import {
+  ServicesContainer,
+  ServiceBlock,
+  ServiceSquare,
+  ServiceContent,
+  ServiceTitle,
+  ServiceDesc,
+  ServiceImpact,
+  ServiceIcon
+} from "./styles.js";
+
 import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaChartLine } from "react-icons/fa";
 
 export default function ServicesPage() {
@@ -45,10 +56,35 @@ export default function ServicesPage() {
     }
   ];
 
+  const [visibleBlocks, setVisibleBlocks] = useState([]);
+
+  const refs = useRef([]);
+
+  useEffect(() => {
+    refs.current.forEach((ref, idx) => {
+      if (!ref) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisibleBlocks((prev) => [...prev, idx]);
+            observer.unobserve(ref);
+          }
+        },
+        { threshold: 0.3 }
+      );
+      observer.observe(ref);
+    });
+  }, []);
+
   return (
     <ServicesContainer>
       {services.map((service, idx) => (
-        <ServiceBlock key={idx} reverse={idx % 2 !== 0}>
+        <ServiceBlock
+          key={idx}
+          reverse={idx % 2 !== 0}
+          ref={(el) => (refs.current[idx] = el)}
+          animate={visibleBlocks.includes(idx)}
+        >
           <ServiceSquare>
             <ServiceIcon>{service.icon}</ServiceIcon>
             <ServiceTitle>{service.title}</ServiceTitle>

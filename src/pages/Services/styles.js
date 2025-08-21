@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 const gradientMove = keyframes`
   0% { background-position:0% 50%; }
@@ -10,6 +10,11 @@ const float = keyframes`
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
+`;
+
+const fadeSlideIn = keyframes`
+  0% { opacity: 0; transform: translateX(-50px);}
+  100% { opacity: 1; transform: translateX(0);}
 `;
 
 export const ServicesContainer = styled.div`
@@ -27,15 +32,26 @@ export const ServiceBlock = styled.div`
   justify-content: center;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
   gap: 40px;
+  opacity: 0;
+  transform: translateX(${({ reverse }) => (reverse ? "50px" : "-50px")});
+  transition: all 0.8s ease;
+
+  ${({ animate }) =>
+    animate &&
+    css`
+      animation: ${fadeSlideIn} 0.8s forwards;
+    `}
 
   @media (max-width: 768px) {
     flex-direction: column;
+    text-align: center;
+    transform: translateX(0);
   }
 `;
 
 export const ServiceSquare = styled.div`
   width: 400px;
-  height: 300px;
+  height: 400px;
   border-radius: 20px;
   background: linear-gradient(135deg, #4f00bc, #7c3aed, #3b82f6, #06b6d4);
   background-size: 400% 400%;
@@ -62,9 +78,14 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceContent = styled.div`
   max-width: 500px;
+  background: #111111aa; /* extensão do card com leve transparência */
+  padding: 20px 30px;
+  border-radius: 20px;
   color: #ffffffcc;
 
   @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 20px;
     text-align: center;
   }
 `;
