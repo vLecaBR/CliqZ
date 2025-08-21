@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Hero />
       <ServicesSection />   
-      <AboutSection />      
+        <AboutSection />    
       <PortfolioSection /> 
       <ContactCTA />
     </>

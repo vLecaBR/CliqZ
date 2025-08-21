@@ -1,13 +1,10 @@
-import { Container, Title, Text, ImageWrapper, Wrapper } from "./styles.js";
-import aboutImg from "../../assets/about-placeholder.png"; // substitua pela sua imagem
+import { Container, Wrapper, Title, Text, Shapes } from "./styles.js";
 
 export default function AboutSection() {
   return (
     <Container>
       <Wrapper>
-        <ImageWrapper>
-          <img src={aboutImg} alt="Sobre a LK DIGITAL" />
-        </ImageWrapper>
+        <Shapes /> {/* animações/gradientes de fundo */}
         <div>
           <Title>Sobre a LK DIGITAL</Title>
           <Text>
