@@ -8,10 +8,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesSection />   
+        <ServicesSection />   
         <AboutSection />    
-      <PortfolioSection /> 
-      <ContactCTA />
+        <ContactCTA />
     </>
   );
 }

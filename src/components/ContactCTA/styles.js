@@ -12,7 +12,7 @@ export const Text = styled.h3`
 
 export const CTA = styled.a`
   display: inline-block;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.accent};
   color: white;
   padding: 14px 28px;
   border-radius: 9999px;

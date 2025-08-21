@@ -30,14 +30,14 @@ export const Card = styled.div`
 
   &:hover {
     transform: translateY(-6px);
-    border-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.accent};
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   }
 `;
 
 export const Icon = styled.div`
   font-size: 2rem;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.accent};
   margin-bottom: 15px;
 `;
 
