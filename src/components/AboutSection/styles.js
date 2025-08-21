@@ -1,10 +1,23 @@
 import styled, { keyframes } from "styled-components";
 
-// animação de flutuação
+// flutuação shapes
 const float = keyframes`
   0% { transform: translateY(0) rotate(0deg);}
   50% { transform: translateY(-20px) rotate(180deg);}
   100% { transform: translateY(0) rotate(360deg);}
+`;
+
+// movimento linhas
+const moveLine = keyframes`
+  0% { transform: translateX(-100%);}
+  100% { transform: translateX(100%);}
+`;
+
+// movimento partículas
+const moveParticle = keyframes`
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-30px);}
+  100% { transform: translateY(0);}
 `;
 
 export const Container = styled.section`
@@ -54,6 +67,7 @@ export const Text = styled.p`
   }
 `;
 
+// shapes grandes flutuantes
 export const Shape = styled.div`
   position: absolute;
   width: ${({ size }) => size}px;
@@ -63,4 +77,27 @@ export const Shape = styled.div`
   top: ${({ top }) => top};
   left: ${({ left }) => left};
   animation: ${float} ${({ size }) => size / 50}s ease-in-out infinite alternate;
+`;
+
+// linhas finas animadas
+export const Line = styled.div`
+  position: absolute;
+  width: 200%;
+  height: 2px;
+  background: rgba(255,255,255,0.1);
+  top: ${({ top }) => top};
+  left: -100%;
+  animation: ${moveLine} 8s linear ${({ delay }) => delay}s infinite;
+`;
+
+// partículas pequenas
+export const Particle = styled.div`
+  position: absolute;
+  width: ${({ size }) => size}px;
+  height: ${({ size }) => size}px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
+  animation: ${moveParticle} ${({ duration }) => duration}s ease-in-out infinite alternate;
 `;
