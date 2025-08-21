@@ -27,7 +27,7 @@ const moveParticle = keyframes`
 // Container
 export const Container = styled.section`
   position: relative;
-  height: 90vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   align-items: center;
