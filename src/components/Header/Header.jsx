@@ -5,9 +5,9 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 const links = [
   { to: '/', label: 'Início' },
-  { to: '/servicos', label: 'Serviços' },
+  { to: '/services', label: 'Serviços' },
   { to: '/portfolio', label: 'Portfólio' },
-  { to: '/contato', label: 'Contato' },
+  { to: '/contact', label: 'Contato' },
 ];
 
 export default function Header() {
