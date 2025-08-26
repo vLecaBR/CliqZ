@@ -8,7 +8,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Header />
+
       <AppRoutes />
+      
       <Footer />
       <WhatsButton />
     </BrowserRouter>
