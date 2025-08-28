@@ -18,21 +18,21 @@ const projects = [
     description:
       "Plataforma completa de e-commerce com carrinho, integração de pagamento e design responsivo.",
     image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80"
+      "https://victorleca.vercel.app/static/media/sales.3762d92311369eb22842.png"
   },
   {
-    id: "app-fitness",
-    title: "App de Fitness",
+    id: "landing-artists",
+    title: "Landing Page Artistas",
     description:
-      "Aplicativo mobile para treinos personalizados, monitoramento de progresso e integração com smartwatch.",
+      "Landing page para promoção de artistas, com galeria de trabalhos e integração com redes sociais, contratar, etc.",
     image:
-      "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?w=800&q=80"
+      "https://victorleca.vercel.app/static/media/djfranzoni.d7eeee493969a564b657.png"
   },
   {
-    id: "landing-startup",
-    title: "Landing Page Startup",
+    id: "landing-mecanica",
+    title: "Landing Page Mecânica",
     description:
-      "Landing page otimizada para conversão, com animações modernas e integração de CRM.",
+      "Landing page para oficina mecânica, com agendamento de serviços e integração com Google Maps.",
     image:
       "https://images.unsplash.com/photo-1522199710521-72d69614c702?w=800&q=80"
   }
