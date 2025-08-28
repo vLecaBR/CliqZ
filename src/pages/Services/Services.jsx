@@ -11,7 +11,12 @@ import {
   ChartWrapper,
 } from "./styles.js";
 
-import { FaLaptopCode, FaMobileAlt, FaPaintBrush, FaChartLine } from "react-icons/fa";
+import {
+  FaLaptopCode,
+  FaMobileAlt,
+  FaPaintBrush,
+  FaChartLine,
+} from "react-icons/fa";
 import { ResponsiveContainer, BarChart, Bar, XAxis, Tooltip } from "recharts";
 
 export default function ServicesPage() {
@@ -19,63 +24,67 @@ export default function ServicesPage() {
     {
       icon: <FaLaptopCode />,
       title: "Desenvolvimento Web",
-      desc: "Sites e aplicações modernas, responsivas e otimizadas para performance e SEO.",
+      desc: "Construímos sites e aplicações web modernas, seguras e escaláveis. Nosso foco é criar experiências digitais rápidas, responsivas e otimizadas para SEO, ajudando sua empresa a se destacar e converter mais clientes.",
       impact: [
-        "Digitalize seu negócio e alcance clientes online 24/7",
-        "Mostre seus produtos e serviços de forma profissional",
-        "Aumenta a visibilidade em até 70%"
+        "Digitalize seu negócio e alcance clientes online 24/7.",
+        "Sites responsivos que funcionam em qualquer dispositivo.",
+        "Performance otimizada aumenta engajamento e tempo de navegação.",
+        "SEO estruturado para aparecer no topo do Google.",
       ],
       data: [
-        { name: "Visibilidade", value: 70 },
-        { name: "Conversão", value: 50 },
-        { name: "Performance", value: 80 }
-      ]
+        { name: "Visibilidade", value: 85 },
+        { name: "Conversão", value: 65 },
+        { name: "Performance", value: 90 },
+      ],
     },
     {
       icon: <FaMobileAlt />,
       title: "Aplicativos Mobile",
-      desc: "Apps iOS e Android com design intuitivo e alta performance.",
+      desc: "Criamos apps nativos e híbridos para iOS e Android, com interfaces intuitivas e funcionalidades que entregam valor real. Do protótipo ao lançamento, cuidamos de toda a jornada para colocar sua marca no bolso dos seus clientes.",
       impact: [
-        "Ofereça serviços e produtos na palma da mão do seu cliente",
-        "Melhore engajamento e fidelização de usuários",
-        "Pode aumentar a retenção em até 50%"
+        "Expanda seu alcance com apps multiplataforma.",
+        "Aumente a fidelização com notificações e interações em tempo real.",
+        "Design focado na usabilidade, garantindo melhor experiência.",
+        "Integrações inteligentes com sistemas e APIs externas.",
       ],
       data: [
-        { name: "Retenção", value: 50 },
-        { name: "Engajamento", value: 65 },
-        { name: "Experiência", value: 90 }
-      ]
+        { name: "Retenção", value: 60 },
+        { name: "Engajamento", value: 75 },
+        { name: "Experiência", value: 95 },
+      ],
     },
     {
       icon: <FaPaintBrush />,
       title: "Design & Branding",
-      desc: "Identidade visual, UX/UI design e branding para criar experiências únicas.",
+      desc: "Sua marca é a identidade do seu negócio. Criamos logotipos, identidades visuais, UX/UI design e materiais que transmitem profissionalismo e criam conexão emocional com seu público.",
       impact: [
-        "Construa uma marca forte e memorável",
-        "Melhore a experiência do usuário em todos os pontos de contato",
-        "Branding consistente gera até 23% mais fidelização"
+        "Construa uma marca forte e memorável.",
+        "Design de interfaces que melhoram a experiência do usuário.",
+        "Materiais gráficos consistentes para redes sociais e impressos.",
+        "Branding sólido gera mais reconhecimento e fidelização.",
       ],
       data: [
-        { name: "Fidelização", value: 23 },
-        { name: "Experiência", value: 80 },
-        { name: "Força da Marca", value: 75 }
-      ]
+        { name: "Fidelização", value: 40 },
+        { name: "Experiência", value: 85 },
+        { name: "Força da Marca", value: 80 },
+      ],
     },
     {
       icon: <FaChartLine />,
       title: "Marketing Digital",
-      desc: "Estratégias de marketing, SEO e campanhas que geram resultados reais.",
+      desc: "Planejamos e executamos estratégias digitais que trazem resultados reais. Desde campanhas de tráfego pago até SEO e automação de marketing, ajudamos sua empresa a conquistar clientes qualificados e aumentar o faturamento.",
       impact: [
-        "Atraia clientes qualificados através de campanhas inteligentes",
-        "Otimize conversões e ROI",
-        "Crescimento médio de 60% ao ano"
+        "Campanhas inteligentes para atrair clientes prontos para comprar.",
+        "Otimização de funis de vendas e conversões.",
+        "SEO técnico para ranquear sua empresa organicamente.",
+        "Relatórios claros e métricas de performance em tempo real.",
       ],
       data: [
-        { name: "ROI", value: 70 },
-        { name: "Conversão", value: 60 },
-        { name: "Crescimento", value: 60 }
-      ]
-    }
+        { name: "ROI", value: 80 },
+        { name: "Conversão", value: 70 },
+        { name: "Crescimento", value: 65 },
+      ],
+    },
   ];
 
   const [visibleBlocks, setVisibleBlocks] = useState([]);
@@ -122,7 +131,11 @@ export default function ServicesPage() {
                 <BarChart data={service.data}>
                   <XAxis dataKey="name" stroke="#fff" />
                   <Tooltip />
-                  <Bar dataKey="value" fill="#7c3aed" radius={[10, 10, 0, 0]} />
+                  <Bar
+                    dataKey="value"
+                    fill="#7c3aed"
+                    radius={[10, 10, 0, 0]}
+                  />
                 </BarChart>
               </ResponsiveContainer>
             </ChartWrapper>
