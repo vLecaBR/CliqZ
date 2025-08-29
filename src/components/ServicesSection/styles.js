@@ -1,3 +1,4 @@
+// styles.js
 import styled from "styled-components";
 
 export const Container = styled.section`
@@ -8,46 +9,67 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h2`
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   color: ${({ theme }) => theme.colors.text};
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: ${({ theme }) => theme.colors.accent};
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
 `;
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
 `;
 
 export const Card = styled.div`
   background: ${({ theme }) => theme.colors.card};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ theme }) => theme.layout.radius};
-  padding: 30px 20px;
+  padding: 35px 25px;
   transition: all 0.3s ease;
   cursor: default;
+  text-align: left;
 
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     border-color: ${({ theme }) => theme.colors.accent};
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 `;
 
 export const Icon = styled.div`
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: ${({ theme }) => theme.colors.accent};
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
   font-weight: 600;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const Desc = styled.p`
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: ${({ theme }) => theme.colors.muted};
+  margin-bottom: 15px;
+`;
+
+export const Stats = styled.p`
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.accent};
+  margin-top: 10px;
 `;
