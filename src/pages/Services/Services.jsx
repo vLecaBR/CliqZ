@@ -16,6 +16,7 @@ import {
   FaMobileAlt,
   FaPaintBrush,
   FaChartLine,
+  FaRobot,
 } from "react-icons/fa";
 import { ResponsiveContainer, BarChart, Bar, XAxis, Tooltip } from "recharts";
 
@@ -38,22 +39,6 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <FaMobileAlt />,
-      title: "Aplicativos Mobile",
-      desc: "Criamos apps nativos e híbridos para iOS e Android, com interfaces intuitivas e funcionalidades que entregam valor real. Do protótipo ao lançamento, cuidamos de toda a jornada para colocar sua marca no bolso dos seus clientes.",
-      impact: [
-        "Expanda seu alcance com apps multiplataforma.",
-        "Aumente a fidelização com notificações e interações em tempo real.",
-        "Design focado na usabilidade, garantindo melhor experiência.",
-        "Integrações inteligentes com sistemas e APIs externas.",
-      ],
-      data: [
-        { name: "Retenção", value: 60 },
-        { name: "Engajamento", value: 75 },
-        { name: "Experiência", value: 95 },
-      ],
-    },
-    {
       icon: <FaPaintBrush />,
       title: "Design & Branding",
       desc: "Sua marca é a identidade do seu negócio. Criamos logotipos, identidades visuais, UX/UI design e materiais que transmitem profissionalismo e criam conexão emocional com seu público.",
@@ -67,6 +52,22 @@ export default function ServicesPage() {
         { name: "Fidelização", value: 40 },
         { name: "Experiência", value: 85 },
         { name: "Força da Marca", value: 80 },
+      ],
+    },
+    {
+      icon: <FaRobot />, // pode usar outro ícone do react-icons se preferir
+      title: "Automação Inteligente",
+      desc: "Ajudamos sua empresa a ganhar tempo e eficiência criando fluxos automatizados. Desde aprovações que disparam e-mails até bots no WhatsApp que respondem clientes, nossas soluções eliminam tarefas manuais e aceleram seus resultados.",
+      impact: [
+        "Fluxos de aprovação automáticos com notificações instantâneas.",
+        "Bots no WhatsApp para responder clientes 24/7.",
+        "Integrações entre sistemas que reduzem retrabalho.",
+        "Automação de e-mails e campanhas para maior alcance.",
+      ],
+      data: [
+        { name: "Eficiência", value: 90 },
+        { name: "Tempo", value: 80 },
+        { name: "Satisfação", value: 85 },
       ],
     },
     {
