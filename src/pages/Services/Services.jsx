@@ -33,9 +33,9 @@ export default function ServicesPage() {
         "SEO estruturado para aparecer no topo do Google.",
       ],
       data: [
-        { name: "Visibilidade", value: 85 },
-        { name: "Conversão", value: 65 },
-        { name: "Performance", value: 90 },
+        { name: "Visibilidade", value: 60 },
+        { name: "Conversão", value: 10 },
+        { name: "Performance", value: 70 },
       ],
     },
     {
@@ -49,9 +49,9 @@ export default function ServicesPage() {
         "Branding sólido gera mais reconhecimento e fidelização.",
       ],
       data: [
-        { name: "Fidelização", value: 40 },
-        { name: "Experiência", value: 85 },
-        { name: "Força da Marca", value: 80 },
+        { name: "Fidelização", value: 60 },
+        { name: "Experiência", value: 80 },
+        { name: "Força da Marca", value: 75 },
       ],
     },
     {
@@ -81,9 +81,9 @@ export default function ServicesPage() {
         "Relatórios claros e métricas de performance em tempo real.",
       ],
       data: [
-        { name: "ROI", value: 80 },
-        { name: "Conversão", value: 70 },
-        { name: "Crescimento", value: 65 },
+        { name: "ROI", value: 75 },
+        { name: "Conversão", value: 10 },
+        { name: "Crescimento", value: 85 },
       ],
     },
   ];
