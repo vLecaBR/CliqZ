@@ -44,17 +44,17 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   z-index: 2;
 `;
 
 export const Title = styled.h2`
-  font-size: 9rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    font-size: 5rem;
+    font-size: 2.2rem;
   }
 `;
 
