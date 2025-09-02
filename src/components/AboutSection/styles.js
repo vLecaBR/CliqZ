@@ -44,7 +44,7 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   z-index: 2;
 `;
 
