@@ -31,7 +31,7 @@ export default function Hero() {
           Transformando <span>ideias</span> em experiências digitais
         </Title>
         <Subtitle>
-          Somos a LK DIGITAL: inovação, design e tecnologia para o seu negócio se destacar online.
+          Somos a CliqZ: inovação, design e tecnologia para o seu negócio se destacar online.
           Nossa missão é conectar criatividade e estratégia, entregando soluções que encantam usuários
           e geram resultados reais.
         </Subtitle>
