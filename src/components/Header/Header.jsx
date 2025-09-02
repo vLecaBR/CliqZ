@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <Bar>
-      <Logo to="/">LK DIGITAL</Logo>
+      <Logo to="/">CliqZ</Logo>
       <Nav $open={open}>
         {links.map((l) => (
           <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}>
