@@ -9,6 +9,12 @@ export const Wrap = styled.footer`
 
 export const Text = styled.p`
   margin: 4px 0;
+  color: ${({ theme }) => theme.colors.accent};
+  font-size: 14px;
+`;
+
+export const Text1 = styled.p`
+  margin: 4px 0;
   color: ${({ theme }) => theme.colors.muted};
   font-size: 14px;
 `;
