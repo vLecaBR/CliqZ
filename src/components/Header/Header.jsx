@@ -1,3 +1,4 @@
+// Header.jsx
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bar, Logo, Nav, NavLink, Burger } from './styles.js';
@@ -16,6 +17,7 @@ export default function Header() {
   return (
     <Bar>
       <Logo to="/">CliqZ</Logo>
+
       <Nav $open={open}>
         {links.map((l) => (
           <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}>
@@ -23,8 +25,9 @@ export default function Header() {
           </NavLink>
         ))}
       </Nav>
+
       <Burger onClick={() => setOpen(!open)}>
-        {open ? <FiX size={22} /> : <FiMenu size={22} />}
+        {open ? <FiX size={24} /> : <FiMenu size={24} />}
       </Burger>
     </Bar>
   );

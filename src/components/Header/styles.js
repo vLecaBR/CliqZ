@@ -1,3 +1,4 @@
+// styles.js
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -26,33 +27,48 @@ export const Nav = styled.nav`
   gap: 18px;
 
   @media (max-width: ${({ theme }) => theme.bp.md}) {
-    position: fixed;
-    top: 64px;
-    right: 16px;
-    left: 16px;
-    background: ${({ theme }) => theme.colors.card};
-    backdrop-filter: blur(${({ theme }) => theme.layout.blur});
-    border-radius: ${({ theme }) => theme.layout.radius};
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.9); /* mais visível */
+    border-bottom-left-radius: ${({ theme }) => theme.layout.radius};
+    border-bottom-right-radius: ${({ theme }) => theme.layout.radius};
     border: 1px solid ${({ theme }) => theme.colors.border};
-    padding: 20px;
     flex-direction: column;
-    display: ${({ $open }) => ($open ? 'flex' : 'none')};
+    overflow: hidden;
+    max-height: ${({ $open }) => ($open ? '300px' : '0')};
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    gap: 12px;
+    padding: ${({ $open }) => ($open ? '16px' : '0 16px')};
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* leve destaque */
+    backdrop-filter: blur(${({ theme }) => theme.layout.blur});
   }
 `;
 
 export const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.muted};
+  color: ${({ theme }) => theme.colors.text}; /* texto mais forte */
   font-weight: 600;
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+
   &:hover {
+    background: ${({ theme }) => theme.colors.primary}22; /* só um toque da cor */
     color: ${({ theme }) => theme.colors.accent};
   }
 `;
+
 
 export const Burger = styled.button`
   display: none;
   background: transparent;
   border: none;
   color: ${({ theme }) => theme.colors.text};
+  cursor: pointer;
+
   @media (max-width: ${({ theme }) => theme.bp.md}) {
     display: block;
   }
