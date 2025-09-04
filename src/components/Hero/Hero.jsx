@@ -43,7 +43,7 @@ export default function Hero() {
           Cada projeto é pensado para maximizar resultados, engajamento e crescimento do seu negócio,
           usando as melhores tecnologias e práticas do mercado.
         </Subtitle>
-        <CTA href="/contato">Quero um orçamento</CTA>
+        <CTA href="/contact">Quero um orçamento</CTA>
       </div>
     </Container>
   );
