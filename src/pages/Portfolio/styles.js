@@ -30,7 +30,7 @@ export const Card = styled.div`
 
   &:hover {
     transform: perspective(800px) rotateX(5deg) rotateY(-5deg) scale(1.03);
-    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.45);
+    box-shadow: 0 20px 40px ${({ theme }) => theme.colors.accent};
   }
 `;
 
