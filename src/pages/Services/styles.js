@@ -16,7 +16,7 @@ export const ServicesContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 120px;
-  padding: 120px 20px;
+  padding: 0px 20px;
   background: #0f0f1a;
   overflow: hidden;
 
