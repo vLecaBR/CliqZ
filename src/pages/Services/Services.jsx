@@ -1,7 +1,7 @@
-// ServicesPage.jsx
 import { useRef, useEffect, useState } from "react";
 import {
   ServicesContainer,
+  ServicesHeader,
   ServiceBlock,
   ServiceSquare,
   ServiceContent,
@@ -14,11 +14,11 @@ import {
 
 import {
   FaLaptopCode,
-  FaMobileAlt,
   FaPaintBrush,
   FaChartLine,
   FaRobot,
 } from "react-icons/fa";
+
 import { ResponsiveContainer, BarChart, Bar, XAxis, Tooltip } from "recharts";
 
 export default function ServicesPage() {
@@ -110,6 +110,11 @@ export default function ServicesPage() {
 
   return (
     <ServicesContainer>
+      <ServicesHeader>
+        <h2>Nossos Serviços</h2>
+        <p>Transformamos ideias em experiências digitais de alto impacto</p>
+      </ServicesHeader>
+
       {services.map((service, idx) => (
         <ServiceBlock
           key={idx}
@@ -128,21 +133,40 @@ export default function ServicesPage() {
                 <li key={i}>⚡ {item}</li>
               ))}
             </ServiceImpact>
-            <ChartWrapper>
-              <ResponsiveContainer width="100%" height={200}>
-                <BarChart data={service.data}>
-                  <XAxis dataKey="name" stroke="#bbb" />
-                  <Tooltip contentStyle={{ background: "#111", border: "none", borderRadius: 8, color: "#fff" }} />
-                  <Bar dataKey="value" fill="url(#barGradient)" radius={[10, 10, 0, 0]} />
-                  <defs>
-                    <linearGradient id="barGradient" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#7c3aed" />
-                      <stop offset="100%" stopColor="#06b6d4" />
-                    </linearGradient>
-                  </defs>
-                </BarChart>
-              </ResponsiveContainer>
-            </ChartWrapper>
+            {visibleBlocks.includes(idx) && (
+              <ChartWrapper>
+                <ResponsiveContainer width="100%" height={200}>
+                  <BarChart data={service.data}>
+                    <XAxis dataKey="name" stroke="#bbb" />
+                    <Tooltip
+                      contentStyle={{
+                        background: "#111",
+                        border: "none",
+                        borderRadius: 8,
+                        color: "#fff",
+                      }}
+                    />
+                    <Bar
+                      dataKey="value"
+                      fill="url(#barGradient)"
+                      radius={[10, 10, 0, 0]}
+                    />
+                    <defs>
+                      <linearGradient
+                        id="barGradient"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="0"
+                      >
+                        <stop offset="0%" stopColor="#7c3aed" />
+                        <stop offset="100%" stopColor="#06b6d4" />
+                      </linearGradient>
+                    </defs>
+                  </BarChart>
+                </ResponsiveContainer>
+              </ChartWrapper>
+            )}
           </ServiceContent>
         </ServiceBlock>
       ))}

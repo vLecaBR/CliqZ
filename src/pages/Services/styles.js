@@ -1,11 +1,4 @@
-// styles.js
 import styled, { keyframes, css } from "styled-components";
-
-const gradientMove = keyframes`
-  0% { background-position:0% 50%; }
-  50% { background-position:100% 50%; }
-  100% { background-position:0% 50%; }
-`;
 
 const float = keyframes`
   0% { transform: translateY(0); }
@@ -18,13 +11,43 @@ const fadeSlideIn = keyframes`
   100% { opacity: 1; transform: translateY(0) scale(1);}
 `;
 
-export const ServicesContainer = styled.div`
+export const ServicesContainer = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 100px;
-  padding: 100px 20px;
-  background: ${({ theme }) => theme.colors.bg};
-  width: 100%;
+  gap: 120px;
+  padding: 120px 20px;
+  background: #0f0f1a;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+`;
+
+export const ServicesHeader = styled.div`
+  text-align: center;
+  z-index: 1;
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #aaa;
+  }
 `;
 
 export const ServiceBlock = styled.div`
@@ -32,9 +55,9 @@ export const ServiceBlock = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: ${({ reverse }) => (reverse ? "row-reverse" : "row")};
-  gap: 60px;
+  gap: 70px;
   opacity: 0;
-  transition: all 0.8s ease;
+  z-index: 1;
 
   ${({ animate }) =>
     animate &&
@@ -53,8 +76,7 @@ export const ServiceSquare = styled.div`
   height: 380px;
   border-radius: 30px;
   background: linear-gradient(135deg, #4f00bc, #7c3aed, #3b82f6, #06b6d4);
-  background-size: 400% 400%;
-  animation: ${gradientMove} 12s ease infinite;
+  background-size: 200% 200%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,15 +84,21 @@ export const ServiceSquare = styled.div`
   color: white;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: perspective(800px) rotateX(5deg) rotateY(-5deg) scale(1.03);
+    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.45);
+  }
 `;
 
 export const ServiceIcon = styled.div`
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
   animation: ${float} 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 12px rgba(124,58,237,0.6));
+  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.6));
 `;
 
 export const ServiceTitle = styled.h3`
@@ -81,13 +109,18 @@ export const ServiceTitle = styled.h3`
 
 export const ServiceContent = styled.div`
   max-width: 520px;
-  background: rgba(20,20,20,0.75);
+  background: rgba(20, 20, 20, 0.75);
   backdrop-filter: blur(12px);
   padding: 30px 35px;
   border-radius: 25px;
   color: #eaeaea;
-  border: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -127,5 +160,5 @@ export const ChartWrapper = styled.div`
   background: rgba(28, 28, 28, 0.8);
   border-radius: 20px;
   padding: 15px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 `;
