@@ -49,7 +49,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
 
