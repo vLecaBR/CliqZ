@@ -41,7 +41,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <Container>
-      <h1>Nosso Portfólio 🚀</h1>
+      <h1>Nosso Portfólio</h1>
       <Grid>
         {projects.map((proj) => (
           <Card key={proj.id}>
