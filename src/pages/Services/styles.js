@@ -27,7 +27,7 @@ export const ServicesContainer = styled.section`
     left: -10%;
     width: 120%;
     height: 120%;
-    background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+    background: ${({ theme }) => theme.colors.bg};
     z-index: 0;
     pointer-events: none;
   }
@@ -40,7 +40,7 @@ export const ServicesHeader = styled.div`
   h2 {
     font-size: 2.8rem;
     font-weight: 800;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.primary};
     margin-bottom: 10px;
   }
 
