@@ -1,3 +1,4 @@
+// ServicesPage.jsx
 import { useRef, useEffect, useState } from "react";
 import {
   ServicesContainer,
@@ -55,7 +56,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <FaRobot />, // pode usar outro ícone do react-icons se preferir
+      icon: <FaRobot />,
       title: "Automação Inteligente",
       desc: "Ajudamos sua empresa a ganhar tempo e eficiência criando fluxos automatizados. Desde aprovações que disparam e-mails até bots no WhatsApp que respondem clientes, nossas soluções eliminam tarefas manuais e aceleram seus resultados.",
       impact: [
@@ -124,19 +125,21 @@ export default function ServicesPage() {
             <ServiceDesc>{service.desc}</ServiceDesc>
             <ServiceImpact>
               {service.impact.map((item, i) => (
-                <li key={i}>✅ {item}</li>
+                <li key={i}>⚡ {item}</li>
               ))}
             </ServiceImpact>
             <ChartWrapper>
               <ResponsiveContainer width="100%" height={200}>
                 <BarChart data={service.data}>
-                  <XAxis dataKey="name" stroke="#fff" />
-                  <Tooltip />
-                  <Bar
-                    dataKey="value"
-                    fill="#7c3aed"
-                    radius={[10, 10, 0, 0]}
-                  />
+                  <XAxis dataKey="name" stroke="#bbb" />
+                  <Tooltip contentStyle={{ background: "#111", border: "none", borderRadius: 8, color: "#fff" }} />
+                  <Bar dataKey="value" fill="url(#barGradient)" radius={[10, 10, 0, 0]} />
+                  <defs>
+                    <linearGradient id="barGradient" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="#7c3aed" />
+                      <stop offset="100%" stopColor="#06b6d4" />
+                    </linearGradient>
+                  </defs>
                 </BarChart>
               </ResponsiveContainer>
             </ChartWrapper>
