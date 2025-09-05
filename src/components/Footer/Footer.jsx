@@ -1,4 +1,4 @@
-import { Wrap, Text, Text1 } from './styles.js';
+import { Wrap, Text} from './styles.js';
 
 export default function Footer() {
   return (
