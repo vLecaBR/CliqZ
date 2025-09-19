@@ -10,9 +10,7 @@ export default function App() {
     <BrowserRouter>
       <Analytics />
       <Header />
-
       <AppRoutes />
-      
       <Footer />
       <WhatsButton />
     </BrowserRouter>
