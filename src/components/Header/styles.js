@@ -56,7 +56,7 @@ export const NavLink = styled(Link)`
   transition: background 0.2s ease, color 0.2s ease;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.primary}22; /* só um toque da cor */
+    background: ${({ theme }) => theme.colors.primary}2; /* só um toque da cor */
     color: ${({ theme }) => theme.colors.accent};
   }
 `;
