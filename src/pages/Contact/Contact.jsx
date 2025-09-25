@@ -81,7 +81,7 @@ export default function Contact() {
 
             <Info>
               <div><FaPhoneAlt /> <strong>Whats:</strong> <a href="https://wa.me/5599999999999" target="_blank" rel="noreferrer">+55 (99) 99999-9999</a></div>
-              <div><FaEnvelope /> <strong>E-mail:</strong> <a href="mailto:contato.cliqz.com.br">contato.cliqz.com.br</a></div>
+              <div><FaEnvelope /> <strong>E-mail:</strong> <a href="mailto:contato@cliqz.com.br">contato.cliqz.com.br</a></div>
             </Info>
           </Reveal>
         </Left>

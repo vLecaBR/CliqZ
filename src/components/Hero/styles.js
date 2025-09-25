@@ -72,7 +72,7 @@ export const CTA = styled.a`
   font-weight: 600;
   transition: all 0.3s ease;
   border: 1px solid transparent;
-  margin-top: 90px;
+  margin-top: 80px;
   text-shadow: 0 1px 6px rgba(0,0,0,0.4); /* sombra para manter visível */
 
   &:hover {
