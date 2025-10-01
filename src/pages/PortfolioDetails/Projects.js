@@ -1,19 +1,38 @@
 // src/data/projectsData.js
 const projects = [
-  {
-    id: "site-loja",
-    title: "E-commerce Moderno",
-    description:
-      "Plataforma completa de e-commerce com carrinho, integração de pagamento e design responsivo.",
-    details:
-      "Projeto desenvolvido para trazer uma experiência moderna de compra online, com painel administrativo, integração de pagamento via Stripe e responsividade total.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-    link: "https://meuecommerce.com",
-    media: [
-      { type: "image", url: "https://victorleca.vercel.app/static/media/sales.3762d92311369eb22842.png" },
-      { type: "video", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
-    ],
-  },
+{
+  id: "site-loja",
+  title: "E-commerce Moderno",
+  description:
+    "Plataforma completa de e-commerce com carrinho, integração de pagamento e design responsivo.",
+  details:
+    "Este projeto foi desenvolvido para oferecer uma experiência moderna e segura de compra online. A aplicação conta com fluxo de cadastro/login de usuários, catálogo de produtos dinâmico, carrinho persistente, checkout integrado com Stripe, painel administrativo para gerenciamento de estoque e pedidos, além de API backend robusta conectada ao MongoDB. O design responsivo garante usabilidade em qualquer dispositivo, e a arquitetura foi pensada para escalabilidade e performance.",
+  technologies: [
+    "React.js",
+    "Styled-components",
+    "Framer Motion",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Stripe API",
+    "JWT Authentication",
+    "Cloudinary (uploads de imagens)",
+    "Vercel + Render (deploy)"
+  ],
+  link: "https://meuecommerce.com", // substitua pelo seu deploy real
+  repoFrontend: "https://github.com/vLecaBR/sales-website-model",
+  repoBackend: "https://github.com/vLecaBR/sales-website-model-backend",
+  media: [
+    {
+      type: "image",
+      url: "https://victorleca.vercel.app/static/media/sales.3762d92311369eb22842.png"
+    },
+    {
+      type: "video",
+      url: "https://www.w3schools.com/html/mov_bbb.mp4"
+    }
+  ]
+},
  {
   id: "landing-artists",
   title: "Landing Page Artistas",
