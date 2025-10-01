@@ -14,19 +14,34 @@ const projects = [
       { type: "video", url: "https://www.w3schools.com/html/mov_bbb.mp4" },
     ],
   },
-  {
-    id: "landing-artists",
-    title: "Landing Page Artistas",
-    description:
-      "Landing page para promoção de artistas, com galeria de trabalhos e integração com redes sociais.",
-    details:
-      "Landing page feita para aumentar a presença digital de artistas independentes. Contém galeria de imagens, links sociais e área para contratação.",
-    technologies: ["React", "Styled-components", "Framer Motion"],
-    link: "https://artistas.com",
-    media: [
-      { type: "image", url: "https://victorleca.vercel.app/static/media/djfranzoni.d7eeee493969a564b657.png" },
-    ],
-  },
+ {
+  id: "landing-artists",
+  title: "Landing Page Artistas",
+  description:
+    "Landing page moderna e responsiva para promoção de artistas independentes, com galeria interativa e integração com redes sociais.",
+  details:
+    "Este projeto foi desenvolvido para aumentar a presença digital de artistas independentes, permitindo que apresentem seus trabalhos de forma profissional. A página possui design responsivo, animações suaves e componentes reutilizáveis. Inclui uma galeria de imagens organizada, links sociais, botão de contato e seção de destaques. O foco foi entregar uma experiência imersiva, leve e otimizada para SEO.",
+  technologies: [
+    "React.js",
+    "Styled-components",
+    "Framer Motion",
+    "React Router",
+    "Vercel Hosting",
+    "Figma (UI/UX Design)"
+  ],
+  link: "https://artistas.com",
+  repo: "https://github.com/vLecaBR/djfranzoni-portfolio", // opcional, se quiser linkar o repo
+  media: [
+    {
+      type: "image",
+      url: "https://victorleca.vercel.app/static/media/djfranzoni.d7eeee493969a564b657.png"
+    },
+    {
+      type: "video",
+      url: "https://www.youtube.com/embed/dQw4w9WgXcQ" // exemplo de vídeo demo
+    }
+  ],
+},
   {
     id: "landing-mecanica",
     title: "Landing Page Mecânica",
