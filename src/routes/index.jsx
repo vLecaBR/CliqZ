@@ -3,14 +3,20 @@ import Home from "../pages/Home/Home.jsx";
 import Services from "../pages/Services/Services.jsx";
 import Contact from "../pages/Contact/Contact.jsx";
 import Portfolio from "../pages/Portfolio/Portfolio.jsx";
+import LandingArtists from "../pages/landing-artists/landingArtists.jsx";
 
 export default function AppRoutes() {
   return (
     <Routes>
+      //rotas da aplicação
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/portfolio" element={<Portfolio />} />
+
+      //rotas do portfolio
+      <Route path="/portfolio/landing-artists" element={<LandingArtists />} />
+      
     </Routes>
   );
 }
