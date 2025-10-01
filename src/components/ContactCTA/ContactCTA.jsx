@@ -6,7 +6,7 @@ export default function ContactCTA() {
       <Text>Pronto para levar seu projeto ao próximo nível no digital?
         <br />
       </Text>
-      <CTA href="/contato">Entre em Contato</CTA>
+      <CTA href="/contact">Entre em Contato</CTA>
     </Container>
   );
 }
