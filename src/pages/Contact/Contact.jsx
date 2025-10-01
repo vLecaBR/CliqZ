@@ -124,7 +124,7 @@ export default function Contact() {
                 <FaPaperPlane /> {sending ? "Enviando..." : "Enviar mensagem"}
               </BtnPrimary>
 
-              <BtnGhost as="a" href="https://wa.me/5599999999999?text=Ol%C3%A1%20LK%20DIGITAL%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noreferrer">
+              <BtnGhost as="a" href="https://wa.me/5599999999999?text=Ol%C3%A1%20CliqZ%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noreferrer">
                 <FaWhatsapp /> Abrir no Whats
               </BtnGhost>
             </Actions>
