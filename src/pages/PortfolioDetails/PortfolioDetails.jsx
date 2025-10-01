@@ -48,7 +48,7 @@ export default function PortfolioDetails() {
   return (
     <Container>
       <Header>
-        <h1>// {project.title}</h1>
+        <h1>{project.title}</h1>
         <p>{project.details}</p>
       </Header>
 
