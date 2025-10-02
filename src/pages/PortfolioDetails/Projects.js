@@ -48,7 +48,7 @@ const projects = [
     "Vercel Hosting",
     "Figma (UI/UX Design)"
   ],
-  link: "https://artistas.com",
+  link: "https://djfranzoni-portfolio.vercel.app/",
   repo: "https://github.com/vLecaBR/djfranzoni-portfolio", // opcional, se quiser linkar o repo
   media: [
     {
