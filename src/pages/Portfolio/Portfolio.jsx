@@ -9,11 +9,13 @@ import {
   Content,
   Title,
   Description,
-  Button
+  Button,
+  PageWrapper
 } from "./styles";
 
 export default function Portfolio() {
   return (
+    <PageWrapper>
     <Container>
       <h1>Nosso Portfólio</h1>
       <Grid>
@@ -33,5 +35,6 @@ export default function Portfolio() {
         ))}
       </Grid>
     </Container>
+    </PageWrapper>
   );
 }

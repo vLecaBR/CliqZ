@@ -81,3 +81,13 @@ export const Button = styled.button`
     background: ${({ theme }) => theme.colors.accent};
   }
 `;
+
+export const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+`;
+
+export const Main = styled.main`
+  flex: 1; // ocupa o espaço disponível e empurra o footer pra baixo
+`;
