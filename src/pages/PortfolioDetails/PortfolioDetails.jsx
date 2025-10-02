@@ -36,7 +36,7 @@ export default function PortfolioDetails() {
     return (
       <Container>
         <Header>
-          <h1>Projeto não encontrado 😕</h1>
+          <h1>Projeto não encontrado :(</h1>
           <Link to="/portfolio">
             <Button>Voltar</Button>
           </Link>
@@ -53,7 +53,7 @@ export default function PortfolioDetails() {
       </Header>
 
       <Section ref={ref} visible={visible}>
-        <h2>📸 Mídia do Projeto</h2>
+        <h2>Mídia do Projeto</h2>
         <MediaGrid>
           {project.media.map((m, idx) => (
             <MediaItem key={idx}>
@@ -71,7 +71,7 @@ export default function PortfolioDetails() {
       </Section>
 
       <Section visible={visible}>
-        <h2>🛠 Tecnologias Utilizadas</h2>
+        <h2>Tecnologias Utilizadas</h2>
         <TechList>
           {project.technologies.map((tech, idx) => (
             <TechItem key={idx}>{tech}</TechItem>
