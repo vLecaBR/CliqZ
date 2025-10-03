@@ -35,7 +35,7 @@ export const Header = styled.div`
 export const SectionCard = styled.section.withConfig({
   shouldForwardProp: (prop) => prop !== "visible",
 })`
-  margin-bottom: 64px;
+  margin-bottom: 30px;
   padding: 24px;
   border-radius: 16px;
   background: ${({ theme }) => theme?.colors?.card || "#fff"};

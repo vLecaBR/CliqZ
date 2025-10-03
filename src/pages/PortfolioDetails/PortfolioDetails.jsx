@@ -112,13 +112,11 @@ export default function PortfolioDetails() {
       </SectionCard>
 
       {/* Card 3: CTA / Links */}
-      <SectionCard visible={visible} style={{ textAlign: "center" }}>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           {project.repoFrontend && <a href={project.repoFrontend} target="_blank" rel="noreferrer"><Button as="span">Frontend (repo)</Button></a>}
           {project.repoBackend && <a href={project.repoBackend} target="_blank" rel="noreferrer"><Button as="span">Backend (repo)</Button></a>}
           {project.link && <a href={project.link} target="_blank" rel="noreferrer"><Button as="span" size="lg">Acessar Projeto</Button></a>}
         </div>
-      </SectionCard>
     </Container>
   );
 }
