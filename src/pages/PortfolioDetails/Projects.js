@@ -102,11 +102,11 @@ const projects = [
     details:
       "Landing page institucional criada para clientes conhecerem a oficina. Inclui serviços oferecidos, informações de contato, endereço com mapa e imagens representativas. O foco é atrair clientes e facilitar contato via WhatsApp. Não possui backend, login ou sistema de agendamento interno.",
     about:
-      "Projeto institucional com layout clean e direto, construído com Next.js e TailwindCSS. Responsivo e otimizado para dispositivos móveis, priorizando clareza e experiência do usuário.",
+      "Projeto institucional com layout clean e direto, construído com React.js e Styled-Components. Responsivo e otimizado para dispositivos móveis, priorizando clareza e experiência do usuário.",
     short:
       "Página institucional mostrando serviços, localização e contato via WhatsApp.",
     features: ["Apresentação dos serviços", "Contato via WhatsApp", "Design responsivo e direto"],
-    technologies: ["Next.js", "TailwindCSS", "Google Maps API"],
+    technologies: ["React.js", "Styled-Components", "Google Maps API"],
     link: "https://mecanica.com",
     media: [
       {
