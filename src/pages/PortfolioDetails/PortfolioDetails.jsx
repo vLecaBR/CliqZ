@@ -1,11 +1,10 @@
-// PortfolioDetails.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import projects from "./Projects";
 import {
   Container,
   Header,
-  Section,
+  SectionCard,
   Columns,
   ColumnText,
   ColumnMedia,
@@ -34,9 +33,7 @@ export default function PortfolioDetails() {
       },
       { threshold: 0.18 }
     );
-
     observer.observe(ref.current);
-
     return () => observer.disconnect();
   }, []);
 
@@ -54,42 +51,17 @@ export default function PortfolioDetails() {
   }
 
   const renderMedia = (m, idx) => {
-    if (m.type === "image") {
-      return <img src={m.url} alt={`${project.title}-media-${idx}`} />;
-    }
+    if (m.type === "image") return <img src={m.url} alt={`${project.title}-media-${idx}`} />;
 
-    // Se for link do YouTube (embed) renderiza iframe
-    if (
-      typeof m.url === "string" &&
-      (m.url.includes("youtube.com") ||
-        m.url.includes("youtu.be") ||
-        m.url.includes("youtube-nocookie.com") ||
-        m.url.includes("embed"))
-    ) {
-      // garante o formato embeddable (se for youtube link comum, tenta converter)
+    if (typeof m.url === "string" && (m.url.includes("youtube.com") || m.url.includes("youtu.be") || m.url.includes("embed"))) {
       let src = m.url;
-      if (m.url.includes("watch?v=")) {
-        const id = m.url.split("watch?v=")[1].split("&")[0];
-        src = `https://www.youtube.com/embed/${id}`;
-      } else if (m.url.includes("youtu.be/")) {
-        const id = m.url.split("youtu.be/")[1].split("?")[0];
-        src = `https://www.youtube.com/embed/${id}`;
-      }
-      return (
-        <iframe
-          title={`video-${idx}`}
-          src={src}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ width: "100%", height: "360px", display: "block" }}
-        />
-      );
+      if (m.url.includes("watch?v=")) src = `https://www.youtube.com/embed/${m.url.split("watch?v=")[1].split("&")[0]}`;
+      else if (m.url.includes("youtu.be/")) src = `https://www.youtube.com/embed/${m.url.split("youtu.be/")[1].split("?")[0]}`;
+      return <iframe key={idx} title={`video-${idx}`} src={src} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{ width: "100%", height: "360px", display: "block" }} />;
     }
 
-    // fallback: elemento <video>
     return (
-      <video controls>
+      <video key={idx} controls>
         <source src={m.url} type="video/mp4" />
         Seu navegador não suporta vídeo.
       </video>
@@ -103,37 +75,24 @@ export default function PortfolioDetails() {
         <p>{project.details}</p>
       </Header>
 
-      {/* Sobre */}
-      <Section visible={visible} ref={ref}>
-        <h2>Sobre o Projeto</h2>
-        <p>
-          {project.about ||
-            "Projeto desenvolvido com foco em experiência do usuário, performance e escalabilidade. A implementação cobre desde o design responsivo até integrações externas e deploy."}
-        </p>
-      </Section>
-
-      {/* Colunas: texto esquerda / mídia direita */}
-      <Section visible={visible}>
+      {/* Card 1: Sobre + Funcionalidades */}
+      <SectionCard visible={visible} ref={ref}>
         <Columns>
           <ColumnText>
-            <h2>Visão Geral</h2>
-            <p>
-              {project.short ||
-                "Aqui estão imagens e vídeos que mostram telas importantes e fluxos da aplicação — checkout, catálogo e painel de administração."}
-            </p>
+            <h2>Sobre o Projeto</h2>
+            <p>{project.about || "Projeto desenvolvido com foco em UX, performance e escalabilidade, cobrindo desde design responsivo até integração de APIs."}</p>
+
+            <h2>Funcionalidades</h2>
             <FeatureList>
-              {(project.features || []).length > 0 ? (
-                project.features.map((f, i) => <li key={i}>✅ {f}</li>)
-              ) : (
-                <>
-                  <li>✅ Cadastro e autenticação</li>
-                  <li>✅ Catálogo dinâmico</li>
-                  <li>✅ Integração com provedores de pagamento</li>
-                </>
-              )}
+              {(project.features || [
+                "Cadastro/login com JWT",
+                "Catálogo dinâmico",
+                "Carrinho persistente",
+                "Checkout integrado",
+                "Painel admin",
+              ]).map((f, i) => <li key={i}>✅ {f}</li>)}
             </FeatureList>
           </ColumnText>
-
           <ColumnMedia>
             <MediaGrid>
               {project.media.map((m, idx) => (
@@ -142,56 +101,24 @@ export default function PortfolioDetails() {
             </MediaGrid>
           </ColumnMedia>
         </Columns>
-      </Section>
+      </SectionCard>
 
-      {/* Funcionalidades (mais detalhado) */}
-      <Section visible={visible}>
-        <h2>Funcionalidades Principais</h2>
-        <FeatureList>
-          {(project.features || [
-            "Cadastro/login com JWT",
-            "Catálogo filtrável",
-            "Carrinho persistente",
-            "Checkout integrado (Stripe)",
-            "Painel admin para pedidos",
-          ]).map((f, i) => (
-            <li key={i}>✅ {f}</li>
-          ))}
-        </FeatureList>
-      </Section>
-
-      {/* Tecnologias */}
-      <Section visible={visible}>
+      {/* Card 2: Tecnologias */}
+      <SectionCard visible={visible}>
         <h2>Tecnologias</h2>
         <TechList>
-          {project.technologies.map((tech, i) => (
-            <TechItem key={i}>{tech}</TechItem>
-          ))}
+          {project.technologies.map((tech, i) => <TechItem key={i}>{tech}</TechItem>)}
         </TechList>
-      </Section>
+      </SectionCard>
 
-      {/* Links / CTA */}
-      <Section visible={visible} style={{ textAlign: "center" }}>
+      {/* Card 3: CTA / Links */}
+      <SectionCard visible={visible} style={{ textAlign: "center" }}>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-          {project.repoFrontend && (
-            <a href={project.repoFrontend} target="_blank" rel="noreferrer">
-              <Button as="span">Frontend (repo)</Button>
-            </a>
-          )}
-          {project.repoBackend && (
-            <a href={project.repoBackend} target="_blank" rel="noreferrer">
-              <Button as="span">Backend (repo)</Button>
-            </a>
-          )}
-          {project.link && (
-            <a href={project.link} target="_blank" rel="noreferrer">
-              <Button as="span" size="lg">
-                Acessar Projeto
-              </Button>
-            </a>
-          )}
+          {project.repoFrontend && <a href={project.repoFrontend} target="_blank" rel="noreferrer"><Button as="span">Frontend (repo)</Button></a>}
+          {project.repoBackend && <a href={project.repoBackend} target="_blank" rel="noreferrer"><Button as="span">Backend (repo)</Button></a>}
+          {project.link && <a href={project.link} target="_blank" rel="noreferrer"><Button as="span" size="lg">Acessar Projeto</Button></a>}
         </div>
-      </Section>
+      </SectionCard>
     </Container>
   );
 }
