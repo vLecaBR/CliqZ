@@ -146,7 +146,6 @@ export default function PortfolioDetails() {
       </SectionCard>
 
       {/* Card 3: Links / CTA */}
-      <SectionCard visible={visible} style={{ textAlign: "center" }}>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           {project.repoFrontend && (
             <a href={project.repoFrontend} target="_blank" rel="noreferrer">
@@ -164,7 +163,6 @@ export default function PortfolioDetails() {
             </a>
           )}
         </div>
-      </SectionCard>
     </Container>
   );
 }
