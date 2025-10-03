@@ -133,10 +133,10 @@ export default function PortfolioDetails() {
             </MediaGrid>
           </ColumnMedia>
         </Columns>
-      </SectionCard>
+
 
       {/* Card 2: Tecnologias */}
-      <SectionCard visible={visible}>
+
         <h2>Tecnologias</h2>
         <TechList>
           {project.technologies.map((tech, i) => (
