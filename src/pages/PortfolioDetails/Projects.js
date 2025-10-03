@@ -3,19 +3,20 @@ const projects = [
     id: "site-loja",
     title: "E-commerce Moderno",
     description:
-      "Plataforma completa de e-commerce com catálogo, carrinho, checkout e painel administrativo.",
+      "Plataforma robusta de e-commerce, com experiência de compra otimizada, catálogo dinâmico, checkout seguro e painel administrativo completo.",
     details:
-      "E-commerce completo pensado para uma experiência de compra fluida e segura. Possui catálogo com filtros, carrinho persistente, checkout integrado com Stripe, recibos automáticos por e-mail e painel administrativo para gestão de produtos, pedidos e usuários. Backend robusto em Node.js/Express e banco MongoDB, frontend em React.js com Styled-components e animações via Framer Motion. Design totalmente responsivo e otimizado para performance e SEO.",
+      "Este projeto é um e-commerce fullstack que cobre todo o ciclo de uma loja virtual moderna. Desenvolvido para oferecer uma experiência de compra prática, fluida e segura, ele conta com catálogo de produtos com filtros inteligentes, carrinho persistente, checkout integrado ao Stripe para pagamentos, geração de recibos automáticos por e-mail e painel administrativo para gerenciamento de produtos, pedidos e usuários. O backend foi construído em Node.js com Express e banco de dados MongoDB, garantindo escalabilidade e segurança. O frontend utiliza React.js com Styled-components e animações do Framer Motion, trazendo design responsivo, performance otimizada e boas práticas de SEO.",
     about:
-      "Cobre todo o ciclo de um e-commerce real, desde cadastro de usuários até checkout e gestão administrativa. Ideal para mostrar aplicações escaláveis e seguras.",
+      "Ideal para demonstrar habilidades em aplicações escaláveis e seguras. Mostra domínio de tecnologias fullstack, integração com APIs externas e boas práticas de arquitetura.",
     short:
-      "Demonstra telas principais: home, produto, checkout, carrinho e painel admin. Funcionalidades completas.",
+      "Plataforma de e-commerce com catálogo dinâmico, checkout com Stripe e painel administrativo completo.",
     features: [
-      "Cadastro e login com JWT e refresh tokens",
-      "Catálogo com filtros e paginação",
-      "Carrinho persistente no localStorage",
-      "Checkout integrado com Stripe e e-mails automáticos",
-      "Painel admin com gerenciamento de produtos e pedidos",
+      "Autenticação segura com JWT e refresh tokens",
+      "Catálogo de produtos com filtros e paginação",
+      "Carrinho persistente salvo no localStorage",
+      "Checkout integrado com Stripe + recibos automáticos",
+      "Painel admin para gerenciamento de produtos, pedidos e usuários",
+      "Integração com Cloudinary para upload e otimização de imagens",
     ],
     technologies: [
       "React.js",
@@ -46,14 +47,19 @@ const projects = [
     id: "landing-artists",
     title: "Landing Page Artistas",
     description:
-      "Landing page responsiva para promoção de artistas independentes.",
+      "Landing page responsiva para promoção de artistas independentes, com foco em apresentação visual e interatividade.",
     details:
-      "Landing page simples, focada na apresentação de artistas e seus trabalhos. Inclui galeria de imagens, links para redes sociais e seção de contato. Apesar de visualmente agradável, não possui backend, login ou funcionalidades complexas, sendo ideal para portfólio ou promoção inicial de artistas.",
+      "Projeto de landing page voltado para divulgação de artistas e seus trabalhos, com ênfase na estética e experiência visual. Inclui galeria interativa de imagens, links para redes sociais e seção de contato, funcionando como um cartão de visita digital moderno. Construído em React.js com Styled-components e Framer Motion, possui layout responsivo e otimizado para dispositivos móveis. Apesar de simples e sem backend, é altamente eficaz para portfólios pessoais, lançamentos e apresentações rápidas.",
     about:
-      "Foco em experiência visual e interatividade, utilizando React.js, Styled-components e Framer Motion. Layout responsivo e leve, otimizado para dispositivos móveis, mas sem backend ou interatividade avançada.",
+      "Demonstra a capacidade de criar interfaces atrativas e fluidas, com atenção especial ao design responsivo e experiência do usuário.",
     short:
-      "Landing page simples mostrando portfólio e links sociais. Funcionalidades básicas.",
-    features: ["Galeria interativa", "Links sociais integrados", "SEO básico"],
+      "Landing page interativa para artistas, com galeria, links sociais e contato rápido.",
+    features: [
+      "Galeria de imagens animada e interativa",
+      "Integração direta com redes sociais",
+      "Seção de contato simplificada",
+      "SEO básico para indexação",
+    ],
     technologies: ["React.js", "Styled-components", "Framer Motion"],
     link: "https://djfranzoni-portfolio.vercel.app/",
     repoFrontend: "https://github.com/vLecaBR/djfranzoni-portfolio",
@@ -72,17 +78,18 @@ const projects = [
     id: "my-portfolio",
     title: "Portfólio Pessoal",
     description:
-      "Website pessoal para mostrar projetos, habilidades e contato profissional.",
+      "Site pessoal desenvolvido para apresentar projetos, habilidades e contato profissional de forma moderna e objetiva.",
     details:
-      "Portfólio pessoal moderno, mostrando seções de apresentação, lista de projetos, skills e contato. Totalmente frontend, sem backend ou CMS, mas demonstra habilidades em React.js, Styled-components e Framer Motion. Responsivo e otimizado, perfeito para apresentar experiência profissional.",
+      "Portfólio digital criado para centralizar informações profissionais e destacar projetos desenvolvidos. Conta com seções de apresentação, lista detalhada de projetos, habilidades técnicas e formulário de contato funcional. Apesar de ser totalmente frontend, demonstra domínio em criação de layouts modernos e responsivos, além de boa organização de código. Utiliza React.js, Styled-components e Framer Motion para animações suaves, sendo otimizado para SEO e performance.",
     about:
-      "Foco em UX, apresentação de projetos e legibilidade. Não possui funcionalidades avançadas como login ou integração de APIs externas.",
+      "Serve como vitrine pessoal, destacando experiência, skills e trabalhos desenvolvidos. Ótimo exemplo de site institucional individual.",
     short:
-      "Apresenta projetos, skills e contato, totalmente estático. Funcionalidades simples, ideal para portfólio pessoal.",
+      "Portfólio moderno com projetos, habilidades e formulário de contato.",
     features: [
-      "Seções de apresentação e skills",
-      "Lista de projetos com detalhes",
-      "Formulário de contato funcional (frontend)",
+      "Seção de introdução com resumo profissional",
+      "Lista de projetos detalhada",
+      "Exibição de habilidades técnicas (skills)",
+      "Formulário de contato funcional integrado",
     ],
     technologies: ["React.js", "Styled-components", "Framer Motion"],
     link: "https://victorleca.vercel.app",
@@ -98,15 +105,20 @@ const projects = [
     id: "landing-mecanica",
     title: "Landing Page Mecânica",
     description:
-      "Landing page institucional para oficina mecânica, apresentando serviços e contato.",
+      "Landing page institucional para oficina mecânica, apresentando serviços, contato e localização.",
     details:
-      "Landing page institucional criada para clientes conhecerem a oficina. Inclui serviços oferecidos, informações de contato, endereço com mapa e imagens representativas. O foco é atrair clientes e facilitar contato via WhatsApp. Não possui backend, login ou sistema de agendamento interno.",
+      "Landing page criada para uma oficina mecânica, com o objetivo de atrair clientes e facilitar o contato. Apresenta os principais serviços oferecidos, informações de contato rápido, botão para iniciar conversa via WhatsApp e integração com Google Maps para exibir a localização. Construída em React.js com Styled-components, o design é direto, responsivo e pensado para dispositivos móveis, garantindo que potenciais clientes encontrem informações de forma prática.",
     about:
-      "Projeto institucional com layout clean e direto, construído com React.js e Styled-Components. Responsivo e otimizado para dispositivos móveis, priorizando clareza e experiência do usuário.",
+      "Demonstra habilidade em desenvolver sites institucionais objetivos e focados em conversão, com clareza na apresentação das informações.",
     short:
-      "Página institucional mostrando serviços, localização e contato via WhatsApp.",
-    features: ["Apresentação dos serviços", "Contato via WhatsApp", "Design responsivo e direto"],
-    technologies: ["React.js", "Styled-Components", "Google Maps API"],
+      "Página institucional para oficina, com serviços, WhatsApp e localização no mapa.",
+    features: [
+      "Apresentação clara dos serviços oferecidos",
+      "Contato rápido via botão de WhatsApp",
+      "Mapa integrado com localização da oficina",
+      "Design responsivo otimizado para mobile",
+    ],
+    technologies: ["React.js", "Styled-components", "Google Maps API"],
     link: "https://mecanica.com",
     media: [
       {
